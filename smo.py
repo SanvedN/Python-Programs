@@ -46,8 +46,8 @@ def update(frame):
     set((position, 0, velocity, 0, acceleration, 0))
 
     # Update the animation
-    spring.set_data([0, 0], [0, -position])
-    mass.set_center((0, -position))
+    spring.set_data([0, 0], [0, position])
+    mass.set_center((0, position))
     line.set_data(times, positions)
 
 # Create the figure and axes for animation and graph
@@ -57,8 +57,8 @@ fig, (ax1, ax2) = plt.subplots(nrows=1, ncols=2, figsize=(10, 4))
 ax1.set_xlim(-1, 1)
 ax1.set_ylim(-20, 20)
 ax1.set_aspect('equal')
-spring, = ax1.plot([0, 0], [0, -position], lw=2, color='k')
-mass = plt.Circle((0, -position), 0.5, color='b') # type: ignore
+spring, = ax1.plot([0, 0], [0, position], lw=2, color='k')
+mass = plt.Circle((0, position), 0.5, color='b') # type: ignore
 ax1.add_patch(mass)
 
 # Set up the position vs. time graph plot
