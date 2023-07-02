@@ -1,3 +1,4 @@
-#Program to input temperature in Celcius and print temperature in Farenheit
-c = float(input("Enter value of temperature in celcius : "))
-print("Temperature in Farenheit = ",(c*9/5)+32)
+import numpy as np
+f = np.array([0,12,45.21,34,99.91])
+c = (f-32)*5/9
+print(c)
